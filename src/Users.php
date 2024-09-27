@@ -1,6 +1,6 @@
 <?php
 
-namespace ControllerApi\Assets;
+namespace ControllerApi\Server;
 
 class Users {
     
