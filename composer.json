@@ -3,7 +3,7 @@
     "description": "API Crud para o app Controller",
     "autoload": {
         "psr-4": {
-            "ControllerApi\\Server\\": "assets/"
+            "ControllerApi\\Server\\": "src/"
         }
     },
     "authors": [
