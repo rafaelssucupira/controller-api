@@ -34,7 +34,7 @@ $decoded = array( //mock
 );
 
 //AUTHENTICATION
-$decoded = Authentication::decoded( $_SERVER["HTTP_AUTHORIZATION"] );
+// $decoded = Authentication::decoded( $_SERVER["HTTP_AUTHORIZATION"] );
 if( $decoded["statments"] === "OK" )
 {
     define("DB", $decoded["dataEmp"] );
