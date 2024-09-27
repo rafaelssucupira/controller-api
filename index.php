@@ -9,37 +9,46 @@ define( "PARAMETERS", json_decode(file_get_contents("php://input"), true) );
 require_once(
     "vendor/autoload.php"
 );
-use ControllerApi\Assets\Buy;
-use ControllerApi\Assets\Sale;
-use ControllerApi\Assets\Clients;
-use ControllerApi\Assets\Products;
-use ControllerApi\Assets\Authentication;
-use ControllerApi\Assets\Tax;
-use ControllerApi\Assets\Users;
-use ControllerApi\Assets\Password;
+
+// use Dotenv\Dotenv;
+use ControllerApi\Server\Buy;
+use ControllerApi\Server\Sale;
+use ControllerApi\Server\Clients;
+use ControllerApi\Server\Products;
+use ControllerApi\Server\Authentication;
+use ControllerApi\Server\Tax;
+use ControllerApi\Server\Users;
+use ControllerApi\Server\Password;
 
 //.ENV
-$env = Dotenv::createImmutable( __DIR__ . "/src/Enviroments/" );
+$env = Dotenv\Dotenv::createImmutable( __DIR__ . "/src/Assets/Tools/Enviroments/" );
 $env->load();
 
+
+$decoded = array( //mock
+    "statments" => "OK",
+    "dataEmp" => array(
+        "emp_codigo" => "DEM",
+        "emp_banco" => "rastza11_controller_dem",
+    )    
+);
+
 //AUTHENTICATION
-$decoded = Authentication::decoded( $_SERVER["HTTP_AUTHORIZATION"] );
+// $decoded = Authentication::decoded( $_SERVER["HTTP_AUTHORIZATION"] );
 if( $decoded["statments"] === "OK" )
 {
-
     define("DB", $decoded["dataEmp"] );
     if ( isset(constant("PARAMETERS")["action"]) && !empty(constant("PARAMETERS")["action"]) )
         {
-            try {
-                $action = constant("PARAMETERS")["action"];
-                $class = new $action();
-            }
-            catch(\Exception $e ) {
-                echo json_encode(array(
-                    "statments" => "warning",
-                    "message" => $e->getMessage()
-                ));
-            }
+          
+            $class = array(
+                "Products" => function () {
+                    return new Products();
+                }
+            );   
+            
+            $action = constant("PARAMETERS")["action"];
+            $result = $class[$action]();
             exit;
             
         }
