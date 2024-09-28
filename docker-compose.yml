@@ -2,7 +2,13 @@ services:
   db:
     image: mysql:5.7
     restart: always
+    volumes:
+      - rastza11_controller_dem:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=1234
     ports:
       - "3306:3306"
+    container_name: db  
+volumes:
+  rastza11_controller_dem :
+    external : true
