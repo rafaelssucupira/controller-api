@@ -10,7 +10,6 @@ require_once(
     "vendor/autoload.php"
 );
 
-// use Dotenv\Dotenv;
 use ControllerApi\Server\Buy;
 use ControllerApi\Server\Sale;
 use ControllerApi\Server\Clients;
@@ -21,20 +20,20 @@ use ControllerApi\Server\Users;
 use ControllerApi\Server\Password;
 
 //.ENV
-$env = Dotenv\Dotenv::createImmutable( __DIR__ . "/src/Assets/Tools/Enviroments/" );
-$env->load();
+$env = Dotenv\Dotenv::createImmutable( 
+    __DIR__ . "/src/Assets/Tools/Enviroments/"
+ )->load();
 
-
-$decoded = array( //mock
-    "statments" => "OK",
-    "dataEmp" => array(
-        "emp_codigo" => "DEM",
-        "emp_banco" => "rastza11_controller_dem",
-    )    
-);
 
 //AUTHENTICATION
 // $decoded = Authentication::decoded( $_SERVER["HTTP_AUTHORIZATION"] );
+$decoded = array( //mock
+    "statments" => "OK",
+    "dataEmp" => array(array(
+        "emp_codigo" => "DEM",
+        "emp_banco" => "rastza11_controller_dem",
+    ) )   
+);
 if( $decoded["statments"] === "OK" )
 {
     define("DB", $decoded["dataEmp"] );

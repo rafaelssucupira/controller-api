@@ -1,5 +1,5 @@
 <?php
-namespace Querys\Register;
+namespace ControllerApi\Server\Assets\Querys\Register;
 
 class SqlsPro 
 {
