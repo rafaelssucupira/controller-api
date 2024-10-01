@@ -43,6 +43,9 @@ if( $decoded["statments"] === "OK" )
             $class = array(
                 "Products" => function () {
                     return new Products();
+                },
+                "Clients" => function () {
+                    return new Clients();
                 }
             );   
             

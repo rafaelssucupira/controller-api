@@ -9,7 +9,6 @@ class Products {
     function __construct() {
         $this->data    = constant("PARAMETERS");
         $router         = constant("PARAMETERS")["router"];
-        // var_dump($router);
         $this->$router();
     }
 
