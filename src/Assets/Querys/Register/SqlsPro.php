@@ -3,7 +3,7 @@ namespace ControllerApi\Server\Assets\Querys\Register;
 
 class SqlsPro 
 {
-    public static function SELECT() 
+    public static function READ() 
         {
             return "select 
                     pro.pro_codigo,  
@@ -18,7 +18,7 @@ class SqlsPro
                     order by pro.pro_codigo";
         }
 
-    public static function INSERT() 
+    public static function CREATE() 
         {
             return "insert into pro 
                     (pro_nome, pro_preco, pro_unidade, pro_compra, pro_vende, pro_estoque, pro_ativo)
@@ -46,7 +46,7 @@ class SqlsPro
                     where pro_codigo = :PRO_CODIGO";
 
         }    
-    public static function _DELETE() 
+    public static function DELETE() 
         {
             return "delete from pro 
                     where pro_codigo = :PRO_CODIGO";
