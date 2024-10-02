@@ -7,7 +7,7 @@ class SqlsPro
         {
             return "select 
                     pro.pro_codigo,  
-                    pro.pro_descricao, 
+                    pro.pro_nome, 
                     pro.pro_preco, 
                     pro.pro_unidade, 
                     pro.pro_compra, 
