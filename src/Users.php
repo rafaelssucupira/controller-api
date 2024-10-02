@@ -16,7 +16,7 @@ class Users {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
             array("key" => ":EMP_CODIGO",  "value" => $data["emp_codigo"], "type" => "upper")
@@ -35,7 +35,7 @@ class Users {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         
         $params     = array(
             array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
@@ -63,7 +63,7 @@ class Users {
     {
     
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":USU_SENHA",  "value" => $data["usu_senha"], "type" => "normal"),
             array("key" => ":USU_NIVEL",  "value" => $data["usu_nivel"], "type" => "upper"),
@@ -91,7 +91,7 @@ class Users {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
             array("key" => ":USU_SENHA",  "value" => $data["usu_senha"], "type" => "normal"),
@@ -116,7 +116,7 @@ class Users {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
             array("key" => ":EMP_CODIGO",  "value" => $data["emp_codigo"], "type" => "upper")
