@@ -16,7 +16,7 @@ class Buy {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":CLI_CODIGO",  "value" => $data["cli_codigo"], "type" => "int")
         );
@@ -33,7 +33,7 @@ class Buy {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PED_CODIGO1",  "value" => $data["ped_codigo"], "type" => "int"),
             array("key" => ":PED_CODIGO2",  "value" => $data["ped_codigo"], "type" => "int")
@@ -52,7 +52,7 @@ class Buy {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":CLI_CODIGO",  "value" => $data["cli_codigo"], "type" => "int")
         );
@@ -85,7 +85,7 @@ class Buy {
     // {
         
     //     $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-    //     $data       = constant("PARAMETERS")["data"];
+    //     $data       = constant("PARAMETERS")["params"];
         
     //     $params     = array(
     //         array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
@@ -113,7 +113,7 @@ class Buy {
     // {
     
     //     $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-    //     $data       = constant("PARAMETERS")["data"];
+    //     $data       = constant("PARAMETERS")["params"];
     //     $params     = array(
     //         array("key" => ":USU_SENHA",  "value" => $data["usu_senha"], "type" => "normal"),
     //         array("key" => ":USU_NIVEL",  "value" => $data["usu_nivel"], "type" => "upper"),
@@ -141,7 +141,7 @@ class Buy {
     // {
         
     //     $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-    //     $data       = constant("PARAMETERS")["data"];
+    //     $data       = constant("PARAMETERS")["params"];
     //     $params     = array(
     //         array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
     //         array("key" => ":USU_SENHA",  "value" => $data["usu_senha"], "type" => "normal"),
@@ -166,7 +166,7 @@ class Buy {
     // {
         
     //     $conn       = new SQL( $_ENV['DB_ENDPOINT'], $_ENV['DB_ADMIN'],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-    //     $data       = constant("PARAMETERS")["data"];
+    //     $data       = constant("PARAMETERS")["params"];
     //     $params     = array(
     //         array("key" => ":USU_NOME",  "value" => $data["usu_nome"], "type" => "normal"),
     //         array("key" => ":EMP_CODIGO",  "value" => $data["emp_codigo"], "type" => "upper")

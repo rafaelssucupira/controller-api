@@ -29,7 +29,7 @@ class Products {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
             array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
@@ -58,7 +58,7 @@ class Products {
     {
         // var_dump("hahaha");
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
             array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
@@ -89,7 +89,7 @@ class Products {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PRO_CODIGO",  "value" => $data["pro_codigo"], "type" => "int")
         );

@@ -28,7 +28,7 @@ class Clients {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":CLI_NOME",  "value" => $data["cli_nome"], "type" => "normal"),
             array("key" => ":CLI_RAZAO",  "value" => $data["cli_razao"], "type" => "normal"),
@@ -67,7 +67,7 @@ class Clients {
     {
         // var_dump("hahaha");
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":CLI_NOME",  "value" => $data["cli_nome"], "type" => "normal"),
             array("key" => ":CLI_RAZAO",  "value" => $data["cli_razao"], "type" => "normal"),
@@ -109,7 +109,7 @@ class Clients {
     {
         
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
-        $data       = constant("PARAMETERS")["data"];
+        $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":CLI_CODIGO",  "value" => $data["cli_codigo"], "type" => "int")
         );
