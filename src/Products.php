@@ -34,8 +34,7 @@ class Products {
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
             array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
             array("key" => ":PRO_UNIDADE",  "value" => $data["pro_unidade"], "type" => "upper"),
-            array("key" => ":PRO_COMPRA",  "value" => $data["pro_compra"], "type" => "upper"),
-            array("key" => ":PRO_VENDE",  "value" => $data["pro_vende"], "type" => "upper"),
+            array("key" => ":PRO_TIPO",  "value" => $data["pro_tipo"], "type" => "upper"),
             array("key" => ":PRO_ESTOQUE",  "value" => $data["pro_estoque"], "type" => "upper"),
             array("key" => ":PRO_ATIVO",  "value" => $data["pro_ativo"], "type" => "upper")
             
@@ -63,8 +62,7 @@ class Products {
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
             array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
             array("key" => ":PRO_UNIDADE",  "value" => $data["pro_unidade"], "type" => "upper"),
-            array("key" => ":PRO_COMPRA",  "value" => $data["pro_compra"], "type" => "upper"),
-            array("key" => ":PRO_VENDE",  "value" => $data["pro_vende"], "type" => "upper"),
+            array("key" => ":PRO_TIPO",  "value" => $data["pro_tipo"], "type" => "upper"),
             array("key" => ":PRO_ESTOQUE",  "value" => $data["pro_estoque"], "type" => "upper"),
             array("key" => ":PRO_ATIVO",  "value" => $data["pro_ativo"], "type" => "upper"),
             array("key" => ":PRO_CODIGO",  "value" => $data["pro_codigo"], "type" => "int")
