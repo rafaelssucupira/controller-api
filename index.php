@@ -46,6 +46,9 @@ if( $decoded["statments"] === "OK" )
                 },
                 "Clients" => function () {
                     return new Clients();
+                },
+                "Users" => function () {
+                    return new Users();
                 }
             );   
             
