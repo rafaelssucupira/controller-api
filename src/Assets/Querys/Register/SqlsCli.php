@@ -20,11 +20,9 @@ class SqlsCli
                     cli.cli_municipio,
                     cli.cli_telefones,
                     cli.cli_prazo,
-                    cli.cli_fornecedor,
-                    cli.cli_cliente,
+                    cli.cli_tipo,
                     cli.cli_nfe,
-                    cli.cli_ativo,
-                    cli.ven_codigo
+                    cli.cli_ativo
                     from cli cli 
                     order by cli.cli_codigo";
         }
@@ -32,7 +30,7 @@ class SqlsCli
     public static function CREATE() 
         {
             return "insert into cli 
-                    (cli_nome, cli_razao, cli_cnpjcpf, cli_ie, cli_im, cli_endereco, cli_numero, cli_bairro, cli_cep, cli_uf, cli_municipio, cli_telefones, cli_prazo, cli_fornecedor, cli_cliente, cli_nfe, cli_ativo, ven_codigo)
+                    (cli_nome, cli_razao, cli_cnpjcpf, cli_ie, cli_im, cli_endereco, cli_numero, cli_bairro, cli_cep, cli_uf, cli_municipio, cli_telefones, cli_prazo, cli_tipo, cli_nfe, cli_ativo)
                     values 
                     (
                         :CLI_NOME,
@@ -48,11 +46,9 @@ class SqlsCli
                         :CLI_MUNICIPIO,
                         :CLI_TELEFONES,
                         :CLI_PRAZO,
-                        :CLI_FORNECEDOR,
-                        :CLI_CLIENTE,
+                        :CLI_TIPO,
                         :CLI_NFE,
-                        :CLI_ATIVO,
-                        :VEN_CODIGO
+                        :CLI_ATIVO
                     )";
                        
         }    
@@ -72,11 +68,9 @@ class SqlsCli
                     cli_municipio = :CLI_MUNICIPIO,
                     cli_telefones = :CLI_TELEFONES,
                     cli_prazo = :CLI_PRAZO,
-                    cli_fornecedor = :CLI_FORNECEDOR,
-                    cli_cliente = :CLI_CLIENTE,
+                    cli_tipo = :CLI_TIPO,
                     cli_nfe = :CLI_NFE,
-                    cli_ativo = :CLI_ATIVO,
-                    ven_codigo = :VEN_CODIGO
+                    cli_ativo = :CLI_ATIVO
                     where cli_codigo = :CLI_CODIGO";
                  
         }    

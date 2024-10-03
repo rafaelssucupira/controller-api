@@ -43,11 +43,9 @@ class Clients {
             array("key" => ":CLI_MUNICIPIO",  "value" => $data["cli_municipio"], "type" => "normal"),
             array("key" => ":CLI_TELEFONES",  "value" => $data["cli_telefones"], "type" => "normal"),
             array("key" => ":CLI_PRAZO",  "value" => $data["cli_prazo"], "type" => "int"),
-            array("key" => ":CLI_FORNECEDOR",  "value" => $data["cli_fornecedor"], "type" => "upper"),
-            array("key" => ":CLI_CLIENTE",  "value" => $data["cli_cliente"], "type" => "upper"),
+            array("key" => ":CLI_TIPO",  "value" => $data["cli_tipo"], "type" => "upper"),
             array("key" => ":CLI_NFE",  "value" => $data["cli_nfe"], "type" => "upper"),
-            array("key" => ":CLI_ATIVO",  "value" => $data["cli_ativo"], "type" => "upper"),
-            array("key" => ":VEN_CODIGO",  "value" => $data["ven_codigo"], "type" => "int")
+            array("key" => ":CLI_ATIVO",  "value" => $data["cli_ativo"], "type" => "upper")
         );
         $result     = $conn
                         ->prepareQuery(SqlsCli::CREATE(), $params)
@@ -82,11 +80,9 @@ class Clients {
             array("key" => ":CLI_MUNICIPIO",  "value" => $data["cli_municipio"], "type" => "normal"),
             array("key" => ":CLI_TELEFONES",  "value" => $data["cli_telefones"], "type" => "normal"),
             array("key" => ":CLI_PRAZO",  "value" => $data["cli_prazo"], "type" => "int"),
-            array("key" => ":CLI_FORNECEDOR",  "value" => $data["cli_fornecedor"], "type" => "upper"),
-            array("key" => ":CLI_CLIENTE",  "value" => $data["cli_cliente"], "type" => "upper"),
+            array("key" => ":CLI_TIPO",  "value" => $data["cli_tipo"], "type" => "upper"),
             array("key" => ":CLI_NFE",  "value" => $data["cli_nfe"], "type" => "upper"),
             array("key" => ":CLI_ATIVO",  "value" => $data["cli_ativo"], "type" => "upper"),
-            array("key" => ":VEN_CODIGO",  "value" => $data["ven_codigo"], "type" => "int"),
             array("key" => ":CLI_CODIGO",  "value" => $data["cli_codigo"], "type" => "int")
             
         );

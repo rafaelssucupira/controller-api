@@ -8,7 +8,7 @@ class SqlsPro
             return "select 
                     pro.pro_codigo,  
                     pro.pro_nome, 
-                    pro.pro_preco, 
+                    pro.pro_valor, 
                     pro.pro_unidade, 
                     pro.pro_tipo,
                     pro.pro_estoque, 
@@ -20,11 +20,11 @@ class SqlsPro
     public static function CREATE() 
         {
             return "insert into pro 
-                    (pro_nome, pro_preco, pro_unidade, pro_tipo, pro_estoque, pro_ativo)
+                    (pro_nome, pro_valor, pro_unidade, pro_tipo, pro_estoque, pro_ativo)
                     values 
                     (
                         :PRO_NOME,
-                        :PRO_PRECO,
+                        :PRO_VALOR,
                         :PRO_UNIDADE,
                         :PRO_TIPO,
                         :PRO_ESTOQUE,
@@ -35,7 +35,7 @@ class SqlsPro
         {
             return "update pro set
                     pro_nome = :PRO_NOME, 
-                    pro_preco = :PRO_PRECO, 
+                    pro_valor = :PRO_VALOR, 
                     pro_unidade = :PRO_UNIDADE, 
                     pro_tipo = :PRO_TIPO,
                     pro_estoque = :PRO_ESTOQUE, 

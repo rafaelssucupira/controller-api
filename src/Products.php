@@ -32,7 +32,7 @@ class Products {
         $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
-            array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
+            array("key" => ":PRO_VALOR",  "value" => $data["pro_valor"], "type" => "normal"),
             array("key" => ":PRO_UNIDADE",  "value" => $data["pro_unidade"], "type" => "upper"),
             array("key" => ":PRO_TIPO",  "value" => $data["pro_tipo"], "type" => "upper"),
             array("key" => ":PRO_ESTOQUE",  "value" => $data["pro_estoque"], "type" => "upper"),
@@ -55,12 +55,12 @@ class Products {
 
     public function update() 
     {
-        // var_dump("hahaha");
+     
         $conn       = new SQL( $_ENV['DB_ENDPOINT'], constant("DB")[0]["emp_banco"],  $_ENV['DB_USER'], $_ENV['DB_PASSWORD'] );
         $data       = constant("PARAMETERS")["params"];
         $params     = array(
             array("key" => ":PRO_NOME",  "value" => $data["pro_nome"], "type" => "normal"),
-            array("key" => ":PRO_PRECO",  "value" => $data["pro_preco"], "type" => "normal"),
+            array("key" => ":PRO_VALOR",  "value" => $data["pro_valor"], "type" => "normal"),
             array("key" => ":PRO_UNIDADE",  "value" => $data["pro_unidade"], "type" => "upper"),
             array("key" => ":PRO_TIPO",  "value" => $data["pro_tipo"], "type" => "upper"),
             array("key" => ":PRO_ESTOQUE",  "value" => $data["pro_estoque"], "type" => "upper"),
